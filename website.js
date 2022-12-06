@@ -442,7 +442,7 @@ if (!String.prototype.format) {
             beforeSend: function (xhr) {
                 xhr.setRequestHeader(
                     "Authorization",
-                    "Bearer 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"
+                    "Bearer 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"
                 );
             },
             success: function (data) {
