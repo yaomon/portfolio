@@ -14,6 +14,7 @@ if (!String.prototype.format) {
     let THUMBNAIL_EL =
         '<div class="thumb">' + '<div class="thumb-img"></div>' + "</div>;";
     let THUMBTEXT_EL = '<div class="thumb-text inset-text"></div>';
+    let BASE_URL = "https://raw.githubusercontent.com/yaomon/portfolio/main/";
     function addCharInfo() {
         $("#beatdown").data("info", {
             name: "Beatdown",
@@ -375,9 +376,10 @@ if (!String.prototype.format) {
 
     function addImgThumbInfo(path, val, listEl) {
         let newEl = $(THUMBNAIL_EL);
+
         newEl
             .find(".thumb-img")
-            .css("background-image", "url('" + path + val + "')");
+            .css("background-image", "url('" + BASE_URL + path + "')");
         newEl.attr("id", val.split(".")[0]);
         newEl.click(function () {
             let parCarousel = $(this).parents(".carousel");
@@ -428,7 +430,7 @@ if (!String.prototype.format) {
                 .find(".desc-name .software")
                 .html($(this).data("info").software);
             parCarousel.find(".desc-desc").html($(this).data("info").desc);
-            parCarousel.find(".soft-vid").attr("src", path + val);
+            parCarousel.find(".soft-vid").attr("src", BASE_URL + path);
             parCarousel.find(".soft-vid")[0].load();
         });
         listEl.append(newEl);
@@ -437,14 +439,16 @@ if (!String.prototype.format) {
     function setupImagesCat(path, listEl, processFunc) {
         return $.ajax({
             url: path,
+            beforeSend: function (xhr) {
+                xhr.setRequestHeader(
+                    "Authorization",
+                    "Bearer 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"
+                );
+            },
             success: function (data) {
-                $(data)
-                    .find("a")
-                    .attr("href", function (i, val) {
-                        if (val.match(/\.(jpe?g|png|gif|mp4)$/)) {
-                            processFunc(path, val, listEl);
-                        }
-                    });
+                data.forEach((element) => {
+                    processFunc(element.path, element.name, listEl);
+                });
             },
         });
     }
@@ -622,22 +626,22 @@ if (!String.prototype.format) {
 
     $(document).ready(function () {
         var charReq = setupImagesCat(
-            "media/PixelArt/Characters/",
+            "https://api.github.com/repos/yaomon/portfolio/contents/media/PixelArt/Characters",
             $("#char-cat").find(".category-list"),
             addImgThumbInfo
         );
         var sceneReq = setupImagesCat(
-            "media/PixelArt/Scenes/",
+            "https://api.github.com/repos/yaomon/portfolio/contents/media/PixelArt/Scenes",
             $("#scene-cat").find(".category-list"),
             addImgThumbInfo
         );
         var effReq = setupImagesCat(
-            "media/PixelArt/Effects/",
+            "https://api.github.com/repos/yaomon/portfolio/contents/media/PixelArt/Effects",
             $("#eff-cat").find(".category-list"),
             addImgThumbInfo
         );
         var objReq = setupImagesCat(
-            "media/PixelArt/Objects/",
+            "https://api.github.com/repos/yaomon/portfolio/contents/media/PixelArt/Objects",
             $("#obj-cat").find(".category-list"),
             addImgThumbInfo
         );
@@ -659,7 +663,7 @@ if (!String.prototype.format) {
         });
 
         var softReq = setupImagesCat(
-            "media/Vids/",
+            "https://api.github.com/repos/yaomon/portfolio/contents/media/Vids",
             $(".prog-screen").find(".thumbs-list"),
             addVidThumbInfo
         );
