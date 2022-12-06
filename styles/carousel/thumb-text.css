@@ -1,0 +1,34 @@
+.thumb-text {
+    transition: all var(--anim-speed-med);
+    -webkit-transition: all var(--anim-speed-med);
+    -moz-transition: all var(--anim-speed-med);
+    -ms-transition: all var(--anim-speed-med);
+    -o-transition: all var(--anim-speed-med);
+}
+
+.thumb-text:hover, .thumb-text.selected {
+    text-shadow: 1px 1px 10px rgba(165, 222, 255, 0.5),
+        -1px -1px 1px rgba(0, 18, 182, 0.2);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+    .thumb-text {
+        margin: 0px 10px;
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .prog-screen .thumbs-list {
+        box-sizing: border-box;
+        padding: 2% 0;
+        padding-right: 4%;
+        align-items: flex-end;
+    }
+    .thumb-text {
+        margin-top: 40px;
+        text-align: right;
+        font-size: 2em;
+    }
+}

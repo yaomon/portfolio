@@ -1,0 +1,159 @@
+@media screen and (max-width: 1200px) {
+    .display {
+        width: 100%;
+    }
+
+    .desc {
+        flex-direction: column;
+        height: 50%;
+        font-size: 0.7em;
+    }
+
+    .desc .desc-name,
+    .desc .desc-desc {
+        padding: 0px 20px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .display {
+        width: 80%;
+    }
+
+    .desc {
+        height: 30%;
+    }
+
+    .desc .desc-name {
+        padding-right: 10px;
+        width: 30%;
+    }
+
+    .desc .desc-desc {
+        padding-left: 60px;
+        width: 70%;
+    }
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: 100%;
+    pointer-events: none;
+}
+
+
+.desc {
+    width: 100%;
+}
+
+.main-pic {
+    position: relative;
+    margin: 10%;
+    width: 90%;
+    height: 60%;
+}
+
+.img-disp {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    box-sizing: border-box;
+    padding-bottom: 50px;
+    width: 100%;
+    height: 100%;
+    background-position: bottom;
+    background-origin: content-box;
+    background-size: contain;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+}
+
+.main-img {
+    filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.3)) drop-shadow(3px 3px 8px rgba(0, 0, 0, 0.2));
+    -webkit-filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.3)) drop-shadow(3px 3px 8px rgba(0, 0, 0, 0.2));
+}
+
+.main-shadow1 {
+    bottom: 50px;
+    opacity: 0.35;
+    filter: brightness(0) blur(25px);
+    -webkit-filter: brightness(0) blur(25px);
+    transform: scaleY(0.2) skew(20deg, 5deg);
+    -webkit-transform: scaleY(0.2) skew(20deg, 5deg);
+    -moz-transform: scaleY(0.2) skew(20deg, 5deg);
+    -ms-transform: scaleY(0.2) skew(20deg, 5deg);
+    -o-transform: scaleY(0.2) skew(20deg, 5deg);
+    transform-origin: 50% 100%;
+    -webkit-mask-image: linear-gradient(transparent, rgb(0, 0, 0));
+    mask-image: linear-gradient(transparent, rgb(0, 0, 0));
+}
+
+.main-shadow2 {
+    bottom: 50px;
+    opacity: 0.35;
+    filter: brightness(0) blur(10px);
+    -webkit-filter: brightness(0) blur(10px);
+    transform: scaleY(0.2) skew(25deg, -5deg);
+    -webkit-transform: scaleY(0.2) skew(25deg, -5deg);
+    -moz-transform: scaleY(0.2) skew(25deg, -5deg);
+    -ms-transform: scaleY(0.2) skew(25deg, -5deg);
+    -o-transform: scaleY(0.2) skew(25deg, -5deg);
+    transform-origin: 50% 100%;
+    -webkit-mask-image: linear-gradient(transparent, rgb(0, 0, 0));
+    mask-image: linear-gradient(transparent, rgb(0, 0, 0));
+}
+
+.main-bloom {
+    opacity: 0.1;
+    filter: brightness(2) blur(10px) contrast(2);
+    -webkit-filter: brightness(2) blur(10px) contrast(2);
+}
+
+.desc {
+    display: flex;
+}
+
+.desc .desc-name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.desc-name .name,
+.desc-name .year,
+.desc-name .software {
+    box-sizing: border-box;
+    padding: 10px 0px;
+    width: 100%;
+    text-align: right;
+}
+
+.desc-name .name {
+    background: -webkit-linear-gradient(45deg,
+    rgba(53, 53, 63, 0.9),
+    rgba(3, 11, 10, 0.9),
+    rgba(55, 61, 42, 0.9),
+    rgba(4, 0, 0, 0.9));
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: 400% 400%;
+    font-size: 2.8em;
+}
+
+.desc-name .year,
+.desc-name .software {
+    color: rgb(110, 100, 120);
+    text-shadow: 1px 1px 2px rgba(230, 248, 246, 0.6);
+    font-size: 1.5em;
+    opacity: 0.9;
+}
+
+.desc .desc-desc {
+    margin: auto;
+    font-size: 1.2em;
+    line-height: 1.3;
+    pointer-events: all;
+}

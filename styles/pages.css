@@ -1,0 +1,24 @@
+@import url(carousel/carousel.css);
+@import url(about.css);
+
+.art-screen {
+    display: flex;
+    align-items: center;
+}
+
+.prog-screen {
+    display: flex;
+    align-items: center;
+}
+
+.main-screen {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: auto;
+    padding-top: 25vh;
+    max-width: 1900px;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+}

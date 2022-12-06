@@ -1,0 +1,198 @@
+@media screen and (max-width: 1200px) {
+    .about-text-wrapper {
+        display: none;
+    }
+
+    .about-desc-wrapper  {
+        width: 80%;
+    }
+
+    .about-cat-wrapper  {
+        font-size: 0.8em;
+    }
+
+    .about-cat {
+        clear: both;
+    }
+
+    .tag-list {
+        overflow-x: auto;
+        padding: 10px 20px;
+        -webkit-mask-image: linear-gradient(to right, transparent, rgb(0, 0, 0) 10%, rgb(0, 0, 0) 90%, transparent);
+        mask-image: linear-gradient(to right, transparent, rgb(0, 0, 0) 10%, rgb(0, 0, 0) 90%, transparent);
+    }
+
+    .desc-body {
+        padding-bottom: 25px;
+        max-height: 300px;
+        -webkit-mask-image: linear-gradient(transparent, rgb(0, 0, 0) 10%, rgb(0, 0, 0) 80%, transparent);
+        mask-image: linear-gradient(transparent, rgb(0, 0, 0) 10%, rgb(0, 0, 0) 80%, transparent);
+    }
+
+    .doc-link {
+        margin-top: 20px;
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .about-cat {
+        margin-right: 40px;
+    }
+
+    .about-desc-desc  {
+        width: 80%;
+    }
+
+    .about-desc-desc {
+        text-align: justify;
+    }
+
+    .doc-link {
+        font-size: 1.5em;
+    }
+    .desc-body {
+        max-height: 150px;
+    }
+}
+
+.about-text-wrapper {
+    position: relative;
+    overflow: visible;
+    max-width: 78%;
+    height: 36%;
+}
+
+.about-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 92%;
+    height: 100%;
+    background-image: url("../media/About/aboutBG.jpg");
+    -webkit-background-clip: text;
+    background-size: cover;
+    text-align: center;
+    text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.4);
+    font-weight: bolder;
+    font-size: 18vw;
+    filter: drop-shadow(-1px -1px 2px rgba(0, 0, 0, 0.4)) drop-shadow(1px 1px 1px rgba(255, 255, 255, 0.4));
+    -webkit-filter: drop-shadow(-1px -1px 2px rgba(0, 0, 0, 0.4)) drop-shadow(1px 1px 1px rgba(255, 255, 255, 0.4));
+    -webkit-text-fill-color: transparent;
+}
+
+.about-desc-wrapper {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: 15px 5%;
+    min-height: 360px;
+    max-width: 1500px;
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+.about-cat-head {
+    text-align: left;
+    font-size: 1.5em;
+}
+
+.about-cat-head b {
+    margin-right: 10px;
+    font-size: 2em;
+}
+
+.about-cat-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-cat-list {
+    overflow-x: auto;
+}
+
+.about-cat {
+    float: left;
+    text-align: left;
+    font-size: 2em;
+    opacity: 0.6;
+    transition: all var(--anim-speed-med);
+    -webkit-transition: all var(--anim-speed-med);
+    -moz-transition: all var(--anim-speed-med);
+    -ms-transition: all var(--anim-speed-med);
+    -o-transition: all var(--anim-speed-med);
+}
+
+.about-cat-head b, .about-cat:hover, .about-cat.selected {
+    text-shadow: 1px 1px 10px rgba(255, 201, 165, 0.5),
+        -1px -1px 1px rgba(182, 0, 0, 0.2);
+    opacity: 1;
+    cursor: pointer;
+}
+
+.tag-list {
+    display: flex;
+}
+
+.tag-list div {
+    margin: 8px 0;
+    margin-top: 12px;
+    margin-right: 24px;
+    margin-left: 50px;
+    padding: 2px 18px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    white-space: nowrap;
+    opacity: 0;
+}
+
+.about-desc-desc.selected {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-desc-desc {
+    display: none;
+    opacity: 0;
+    transition: all var(--anim-speed-med);
+    -webkit-transition: all var(--anim-speed-med);
+    -moz-transition: all var(--anim-speed-med);
+    -ms-transition: all var(--anim-speed-med);
+    -o-transition: all var(--anim-speed-med);
+}
+
+.desc-body {
+    overflow-y: auto;
+    margin-top: 25px;
+}
+
+.doc-link {
+    margin-right: 50px;
+    font-weight: bold;
+    transition: all var(--anim-speed-med);
+}
+
+.doc-link:not(".disabled"):hover {
+    text-shadow: 1px 1px 10px rgba(255, 201, 165, 0.5),
+    -1px -1px 1px rgba(182, 0, 0, 0.2);
+}
+
+.doc-link.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    user-select: none;
+}
+
+.doc-links-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.downloads-wrapper {
+    margin-top: 20px;
+    margin-left: 5%;
+    font-size: 1.2em;
+}

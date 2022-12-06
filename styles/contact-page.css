@@ -1,0 +1,185 @@
+@media screen and (max-width: 1200px) {
+    .contact-name  {
+        font-size: 2em;
+    }
+
+    .contact-thumb {
+        width: 64px;
+        height: 64px;
+    }
+
+    .contact-container {
+        width: 300px;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    .contact-name  {
+        font-size: 3em;
+    }
+
+    .contact-thumb {
+        width: 128px;
+        height: 128px;
+    }
+
+    .contact-container {
+        width: 400px;
+    }
+}
+
+.contact-logo, .contact-logo-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+}
+
+.contact-thumb {
+    position: relative;
+    margin-right: 10px;
+}
+
+.contact-logo {
+    filter: drop-shadow(-1px -1px 2px rgba(0, 0, 0, 0.4)) drop-shadow(1px 1px 1px rgba(255, 255, 255, 0.4));
+    -webkit-filter: drop-shadow(-1px -1px 2px rgba(0, 0, 0, 0.4)) drop-shadow(1px 1px 1px rgba(255, 255, 255, 0.4));
+}
+
+.contact-logo-mask {
+    background-size: 400% 400%;
+    filter: drop-shadow(1px 1px 4px rgba(255, 255, 255, 0.4));
+    -webkit-filter: drop-shadow(1px 1px 4px rgba(255, 255, 255, 0.4));
+    transition: all var(--anim-speed-med);
+    -webkit-transition: all var(--anim-speed-med);
+    -moz-transition: all var(--anim-speed-med);
+    -ms-transition: all var(--anim-speed-med);
+    -o-transition: all var(--anim-speed-med);
+    mask-size: contain;
+}
+
+#twitter .contact-logo {
+    background-image: url("../media/Contact/twitterLogo.png");
+}
+
+#twitter .contact-logo-mask  {
+    background-image: -webkit-linear-gradient(45deg, transparent 0%,  transparent 75%,  rgba(101, 225, 232, 0.5) 80%,    rgba(153, 231, 255, 0.75) 90%,    rgba(58, 222, 255, 1) 100%);
+    -webkit-mask-image: url("../media/Contact/twitterLogoMask.png");
+    mask-image: url("../media/Contact/twitterLogoMask.png");
+}
+
+#twitter:hover .contact-name {
+    text-shadow: 1px 1px 10px rgba(0, 238, 255, 0.5),
+        -1px -1px 1px rgba(0, 167, 239, 0.2);
+}
+
+#insta .contact-logo {
+    background-image: url("../media/Contact/instaLogo.png");
+}
+
+#insta .contact-logo-mask  {
+    background-image: -webkit-linear-gradient(45deg, transparent 0%, transparent 75%, #f09433 80%,#e6683c 85%,#dc2743 90%,#cc2366 95%,#bc1888 100%);
+    -webkit-mask-image: url("../media/Contact/instaLogoMask.png");
+    mask-image: url("../media/Contact/instaLogoMask.png");
+}
+
+#insta:hover .contact-name {
+    text-shadow: 1px 1px 10px rgba(255, 50, 50, 0.5),
+        -1px -1px 1px rgba(255, 49, 152, 0.5);
+}
+
+#tumblr .contact-logo {
+    background-image: url("../media/Contact/tumblrLogo.png");
+}
+
+#tumblr .contact-logo-mask  {
+    background-image: -webkit-linear-gradient(45deg, transparent 0%,  transparent 75%,  rgba(77, 77, 190, 0.5) 80%,    rgba(90, 122, 174, 0.75) 90%,    rgb(45, 91, 159) 100%);
+    -webkit-mask-image: url("../media/Contact/tumblrLogoMask.png");
+    mask-image: url("../media/Contact/tumblrLogoMask.png");
+}
+
+#tumblr:hover .contact-name {
+    text-shadow: 1px 1px 10px rgba(100, 92, 153, 0.2),
+        -1px -1px 1px rgba(89, 93, 193, 0.5);
+}
+
+#devi .contact-logo {
+    background-image: url("../media/Contact/deviLogo.png");
+}
+
+#devi .contact-logo-mask  {
+    background-image: -webkit-linear-gradient(45deg, transparent 0%,  transparent 75%,  rgba(4, 121, 47, 0.5) 80%,    rgba(52, 181, 99, 0.75) 90%,    rgb(85, 228, 114) 100%);
+    -webkit-mask-image: url("../media/Contact/deviLogoMask.png");
+    mask-image: url("../media/Contact/deviLogoMask.png");
+}
+
+#devi:hover .contact-name {
+    text-shadow: 1px 1px 10px rgba(52, 181, 99, 0.5), -1px -1px 1px rgba(85, 228, 114, 0.5);
+}
+
+#pj .contact-logo {
+    background-image: url("../media/Contact/pjLogo.png");
+}
+
+#pj .contact-logo-mask  {
+    background-image: -webkit-linear-gradient(45deg, transparent 0%,  transparent 75%,  rgba(43, 255, 0, 0.5) 80%,    rgba(0, 123, 255, 0.75) 90%,    rgb(0, 217, 255) 100%);
+    -webkit-mask-image: url("../media/Contact/pjLogoMask.png");
+    mask-image: url("../media/Contact/pjLogoMask.png");
+}
+
+#pj:hover .contact-name {
+    text-shadow: 1px 1px 10px rgba(0, 217, 255, 0.5), -1px -1px 1px rgba(85, 149, 228, 0.5);
+}
+
+#pix .contact-logo {
+    background-image: url("../media/Contact/pixLogo.png");
+}
+
+#pix .contact-logo-mask  {
+    background-image: -webkit-linear-gradient(45deg, transparent 0%,  transparent 75%,  rgba(255, 0, 0, 0.5) 80%,    rgba(255, 107, 188, 0.75) 90%,    rgb(255, 199, 249) 100%);
+    -webkit-mask-image: url("../media/Contact/pixLogoMask.png");
+    mask-image: url("../media/Contact/pixLogoMask.png");
+}
+
+#pix:hover .contact-name {
+    text-shadow: 1px 1px 10px rgba(255, 32, 32, 0.5), -1px -1px 1px rgba(255, 94, 255, 0.5);
+}
+
+.contact-container:hover .contact-logo-mask {
+    background-position: right 0px top 0px;
+}
+
+.contact-name {
+    transition: all var(--anim-speed-med);
+    -webkit-transition: all var(--anim-speed-med);
+    -moz-transition: all var(--anim-speed-med);
+    -ms-transition: all var(--anim-speed-med);
+    -o-transition: all var(--anim-speed-med);
+}
+
+.contact-container:hover {
+    cursor: pointer;
+}
+
+.contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    box-sizing: border-box;
+    margin: auto;
+    padding: 5%;
+    max-width: 1200px;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-start;
+}

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Kyle Sun</title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="styles/website.css" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Rubik"
+        />
+        <link rel="icon" type="image/x-icon" href="media/favicon.ico" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="website.js" async defer></script>
+    </head>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-PBCGE3EGX0"
+    ></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+
+        gtag("config", "G-PBCGE3EGX0");
+    </script>
+
+    <body>
+        <div class="main-body">
+            <div class="side-menu">
+                <div class="tab-holder">
+                    <div class="tab-container art-tab">
+                        <div class="tab inset-text">Art</div>
+                    </div>
+                    <div class="tab-container prog-tab">
+                        <div class="tab inset-text">Software</div>
+                    </div>
+                    <div class="tab-container bio-tab">
+                        <div class="tab inset-text">About</div>
+                    </div>
+                    <div class="tab-container contact-tab">
+                        <div class="tab inset-text">Contact</div>
+                    </div>
+                </div>
+            </div>
+            <div class="single-container main-screen">
+                <div class="title inset-text fade-scroll">Kyle Sun</div>
+                <div class="tab-holder fade-scroll">
+                    <div class="tab-container art-tab">
+                        <div class="tab inset-text">Art</div>
+                    </div>
+                    <div class="tab-container prog-tab">
+                        <div class="tab inset-text">Software</div>
+                    </div>
+                    <div class="tab-container bio-tab">
+                        <div class="tab inset-text">About</div>
+                    </div>
+                    <div class="tab-container contact-tab">
+                        <div class="tab inset-text">Contact</div>
+                    </div>
+                </div>
+            </div>
+            <div class="single-container art-screen fade-scroll">
+                <div class="carousel">
+                    <div class="thumbs-list">
+                        <div class="category selected" id="char-cat">
+                            <div class="category-title-container">
+                                <div class="category-title inset-text">
+                                    Beings
+                                </div>
+                            </div>
+                            <div class="category-list"></div>
+                        </div>
+                        <div class="category" id="scene-cat">
+                            <div class="category-title-container">
+                                <div class="category-title inset-text">
+                                    Scenes
+                                </div>
+                            </div>
+                            <div class="category-list"></div>
+                        </div>
+                        <div class="category" id="eff-cat">
+                            <div class="category-title-container">
+                                <div class="category-title inset-text">
+                                    Effects
+                                </div>
+                            </div>
+                            <div class="category-list"></div>
+                        </div>
+                        <div class="category" id="obj-cat">
+                            <div class="category-title-container">
+                                <div class="category-title inset-text">
+                                    Objects
+                                </div>
+                            </div>
+                            <div class="category-list"></div>
+                        </div>
+                    </div>
+                    <div class="display">
+                        <div class="main-pic">
+                            <div class="img-disp main-shadow1"></div>
+                            <div class="img-disp main-shadow2"></div>
+                            <div class="img-disp main-img"></div>
+                            <div class="img-disp main-bloom"></div>
+                        </div>
+                        <div class="desc">
+                            <div class="desc-name">
+                                <div class="name inset-text"></div>
+                                <div class="year"></div>
+                            </div>
+                            <div class="desc-desc"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single-container prog-screen fade-scroll">
+                <div class="carousel">
+                    <div class="thumbs-list"></div>
+                    <div class="display">
+                        <div class="soft-main-pic underlit inner-shadow">
+                            <video
+                                class="soft-vid underlit inner-shadow"
+                                controls
+                                preload="true"
+                                autoplay
+                                loop
+                                muted
+                            ></video>
+                            <div class="vid-shadow underlit inner-shadow"></div>
+                            <div class="vid-shadow underlit inner-shadow"></div>
+                            <div class="vid-shadow underlit inner-shadow"></div>
+                        </div>
+                        <div class="desc">
+                            <div class="desc-name">
+                                <div class="name inset-text"></div>
+                                <div class="software"></div>
+                            </div>
+                            <div class="desc-desc"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single-container bio-screen fade-scroll">
+                <div class="about-text-wrapper">
+                    <div class="about-text">ABOUT</div>
+                </div>
+                <div class="about-desc-wrapper fade-scroll">
+                    <div class="about-cat-wrapper">
+                        <div class="inset-text about-cat-head">
+                            <b>Kyle Sun </b>is a
+                        </div>
+                        <div class="about-cat-list">
+                            <div id="person-cat" class="inset-text about-cat">
+                                Person
+                            </div>
+                            <div id="engineer-cat" class="inset-text about-cat">
+                                Software Engineer
+                            </div>
+                            <div id="artist-cat" class="inset-text about-cat">
+                                Artist
+                            </div>
+                            <div id="gamedev-cat" class="inset-text about-cat">
+                                Game Developer
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-desc-desc selected" id="person-desc">
+                        <div class="desc-body">
+                            Kyle Sun is a Taiwan born, U.S. based
+                            <b>Embedded Software Engineer</b> and
+                            <b>Freelance Artist</b>.
+                            <b>Bachelor's Degree in Computer Science</b> and
+                            self taught <b>artist of over a decade</b>. His
+                            passions are in any creative endeavor, be it art,
+                            programming, storytelling, or even cooking. He
+                            specializes in <b>Web Development/Design</b> and
+                            <b>Game Development</b>. His well-rounded experience
+                            from front-end to back-end gives him a
+                            <b>unique perspective</b> to be able to
+                            <b>solve problems</b> and
+                            <b>facilitate communication</b> between teams.
+                        </div>
+                        <div class="desc-tags">
+                            <b><div class="tag-head">He likes...</div></b>
+                            <div class="tag-list">
+                                <div class="inner-shadow underlit">
+                                    Game Development
+                                </div>
+                                <div class="inner-shadow underlit">Drawing</div>
+                                <div class="inner-shadow underlit">
+                                    Weightlifting
+                                </div>
+                                <div class="inner-shadow underlit">Cooking</div>
+                                <div class="inner-shadow underlit">Writing</div>
+                                <div class="inner-shadow underlit">Piano</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-desc-desc" id="engineer-desc">
+                        <div class="desc-body">
+                            Kyle is currently employed full-time as an
+                            <b> embedded software engineer </b> working on a
+                            variety of embedded devices in fields ranging from
+                            <b>civil</b> to <b>medical</b>. His work has
+                            provided him with opprotunities to touch all
+                            branches of software and even some hardware. He has
+                            made <b>front-end web UIs</b>,
+                            <b>back-end cloud services</b>,
+                            <b>unit-test suites</b>, and numerous embedded
+                            functions on bare-metal devices including
+                            <b>FOTA</b> and
+                            <b> custom lightweight GUI libraries </b>.
+                        </div>
+                        <div class="desc-tags">
+                            <b><div class="tag-head">He uses...</div></b>
+                            <div class="tag-list">
+                                <div class="inner-shadow underlit">C</div>
+                                <div class="inner-shadow underlit">C++</div>
+                                <div class="inner-shadow underlit">Azure</div>
+                                <div class="inner-shadow underlit">Python</div>
+                                <div class="inner-shadow underlit">React</div>
+                                <div class="inner-shadow underlit">Docker</div>
+                                <div class="inner-shadow underlit">JQuery</div>
+                                <div class="inner-shadow underlit">git</div>
+                                <div class="inner-shadow underlit">Linux</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-desc-desc" id="artist-desc">
+                        <div class="desc-body">
+                            Kyle took his very first art commission in middle
+                            school, and art been a
+                            <b>fiery creative outlet</b> for him ever since.
+                            While he took a few art classes in high school, his
+                            later education focused more on programming, so his
+                            art skills had to come from his
+                            <b> own practice and experimentation</b>. He's been
+                            able to garner a significant chunk of attention,
+                            especially relating to his
+                            <b> pixel art work for games and websites </b> over
+                            the years. Now, he focuses on using his developed
+                            skills to
+                            <b> breathe life into the worlds of the games </b>
+                            he is developing.
+                        </div>
+                        <div class="desc-tags">
+                            <b><div class="tag-head">He uses...</div></b>
+                            <div class="tag-list">
+                                <div class="inner-shadow underlit">
+                                    Aseprite
+                                </div>
+                                <div class="inner-shadow underlit">
+                                    GraphicsGale
+                                </div>
+                                <div class="inner-shadow underlit">Maya</div>
+                                <div class="inner-shadow underlit">Blender</div>
+                                <div class="inner-shadow underlit">Krita</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-desc-desc" id="gamedev-desc">
+                        <div class="desc-body">
+                            With such a unyielding drive for creativity,
+                            <b> game development </b> was the
+                            <b>only logical conclusion</b>. Taking a part from a
+                            each of the creative arts (drawing, music, sound
+                            design, writing, programming, etc.), game
+                            development is both the
+                            <b>unconquerable beast</b> and
+                            <b> destined fate </b> for Kyle. The development
+                            process has been an <b>arduous trek</b>. His
+                            finished games have been short, mainly made for
+                            game-jams. Along the path of his game development
+                            journey lies the <b>promises of return</b> made to
+                            many half-finished projects. One day, when there is
+                            enough time,
+                            <b>
+                                Kyle will complete a full fledged game of his
+                                own </b
+                            >.
+                        </div>
+                        <div class="desc-tags">
+                            <b><div class="tag-head">He uses...</div></b>
+                            <div class="tag-list">
+                                <div class="inner-shadow underlit">
+                                    Game Maker Studio
+                                </div>
+                                <div class="inner-shadow underlit">Unity</div>
+                                <div class="inner-shadow underlit">
+                                    Construct
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="downloads-wrapper">
+                    <div class="doc-links-container">
+                        <a
+                            href="/media/About/Sun_Kyle_Resume_Web.pdf"
+                            download="Sun_Kyle_Resume.pdf"
+                            ><div id="resume" class="doc-link inset-text">
+                                Developer Résumé
+                            </div></a
+                        >
+                        <div
+                            id="commission"
+                            class="doc-link inset-text disabled"
+                            title="Commissions Closed"
+                        >
+                            Art Commission Sheet
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single-container contact-screen fade-scroll">
+                <div class="contact-list">
+                    <a href="https://twitter.com/YaomonKS" target="_blank">
+                        <div class="contact-container" id="twitter">
+                            <div class="contact-thumb">
+                                <div class="contact-logo"></div>
+                                <div class="contact-logo-mask"></div>
+                            </div>
+                            <div class="contact-name inset-text">YaomonKS</div>
+                        </div>
+                    </a>
+                    <a
+                        href="https://www.instagram.com/theyaomon/"
+                        target="_blank"
+                    >
+                        <div class="contact-container" id="insta">
+                            <div class="contact-thumb">
+                                <div class="contact-logo"></div>
+                                <div class="contact-logo-mask"></div>
+                            </div>
+                            <div class="contact-name inset-text">theyaomon</div>
+                        </div>
+                    </a>
+                    <a href="https://yaomon.tumblr.com/" target="_blank">
+                        <div class="contact-container" id="tumblr">
+                            <div class="contact-thumb">
+                                <div class="contact-logo"></div>
+                                <div class="contact-logo-mask"></div>
+                            </div>
+                            <div class="contact-name inset-text">Yaomon</div>
+                        </div>
+                    </a>
+                    <a href="https://www.pixilart.com/yaomon" target="_blank">
+                        <div class="contact-container" id="pix">
+                            <div class="contact-thumb">
+                                <div class="contact-logo"></div>
+                                <div class="contact-logo-mask"></div>
+                            </div>
+                            <div class="contact-name inset-text">Yaomon</div>
+                        </div>
+                    </a>
+                    <a
+                        href="https://www.deviantart.com/yaomon17"
+                        target="_blank"
+                    >
+                        <div class="contact-container" id="devi">
+                            <div class="contact-thumb">
+                                <div class="contact-logo"></div>
+                                <div class="contact-logo-mask"></div>
+                            </div>
+                            <div class="contact-name inset-text">yaomon17</div>
+                        </div>
+                    </a>
+                    <a
+                        href="https://pixeljoint.com/p/28472.htm"
+                        target="_blank"
+                    >
+                        <div class="contact-container" id="pj">
+                            <div class="contact-thumb">
+                                <div class="contact-logo"></div>
+                                <div class="contact-logo-mask"></div>
+                            </div>
+                            <div class="contact-name inset-text">yaomon17</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

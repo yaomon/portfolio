@@ -1,0 +1,111 @@
+.tab-container {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 110px;
+    opacity: 0;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.tab {
+    margin-bottom: 15px;
+    font-weight: bolder;
+    font-size: 2.5em;
+    transition: all var(--anim-speed-med);
+}
+
+.tab-container:hover {
+    cursor: pointer;
+
+}
+
+.tab-container:hover .tab {
+    text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.5),
+        -1px -1px 1px rgba(10, 0, 15, 0.2);
+}
+
+.art-tab,
+.prog-tab,
+.bio-tab,
+.contact-tab {
+    background-size: 200%, 200%;
+}
+
+.art-tab, #char-cat .category-title, #person-cat {
+   animation-delay: 200ms;
+}
+
+.prog-tab, #scene-cat .category-title, #engine-cat {
+    animation-delay: 400ms;
+}
+
+.bio-tab, #eff-cat .category-title, #artist-cat {
+    animation-delay: 600ms;
+}
+
+.contact-tab, #obj-cat .category-title, #gamedev-cat{
+    animation-delay: 800ms;
+}
+
+.art-tab:hover .tab, .art-tab:active .tab, .art-tab.selected .tab, .art-screen .desc-name .name {
+    text-shadow: 1px 1px 10px rgba(186, 255, 165, 0.5),
+        -1px -1px 1px rgba(0, 182, 30, 0.2);
+}
+
+.prog-tab:hover .tab, .prog-tab:active .tab, .prog-tab.selected .tab, .prog-screen .desc-name .name {
+    text-shadow: 1px 1px 10px rgba(165, 222, 255, 0.5),
+        -1px -1px 1px rgba(0, 18, 182, 0.2);
+}
+
+.bio-tab:hover .tab, .bio-tab:active .tab, .bio-tab.selected .tab {
+    text-shadow: 1px 1px 10px rgba(255, 201, 165, 0.5),
+        -1px -1px 1px rgba(182, 0, 0, 0.2);
+}
+.contact-tab:hover .tab, .contact-tab:active .tab, .contact-tab.selected .tab {
+    text-shadow: 1px 1px 10px rgba(130, 130, 130, 0.5),
+        -1px -1px 1px rgba(83, 83, 83, 0.2);
+}
+
+.tab-holder {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    margin-top: 20px;
+    min-height: 120px;
+    width: 70%;
+    transition: all var(--anim-speed-med);
+    -webkit-transition: all var(--anim-speed-med);
+    -moz-transition: all var(--anim-speed-med);
+    -ms-transition: all var(--anim-speed-med);
+    -o-transition: all var(--anim-speed-med);
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.side-menu {
+    position: fixed;
+    right: 55px;
+    z-index: 1;
+}
+
+.side-menu .tab-holder {
+    flex-direction: column;
+    font-size: 0.6em;
+}
+
+.side-menu .tab {
+    margin: 0px;
+}
+
+.side-menu .tab-container {
+    flex-direction: row;
+    height: 40px;
+    opacity: 0.5;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.side-menu .tab-container:hover, .side-menu .tab-container.selected {
+    opacity: 1;
+}
