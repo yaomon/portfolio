@@ -1,4 +1,16 @@
 @import url(tabs.css);
+@media screen and (max-width: 1200px) {
+    .title {
+        font-size: 2.5em;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    .title {
+        font-size: 4em;
+    }
+}
 
 .title {
     box-sizing: border-box;
