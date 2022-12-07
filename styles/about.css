@@ -9,32 +9,34 @@
     }
 
     .about-cat-wrapper  {
-        font-size: 0.7em;
+        font-size: 0.65em;
     }
 
     .about-cat {
         clear: both;
-        font-size: 0.8em;
+        font-size: 0.65em;
     }
 
     .tag-list {
         overflow-x: auto;
-        padding: 10px 20px;
+        padding: 5px 10px;
         -webkit-mask-image: linear-gradient(to right, transparent, rgb(0, 0, 0) 10%, rgb(0, 0, 0) 90%, transparent);
         mask-image: linear-gradient(to right, transparent, rgb(0, 0, 0) 10%, rgb(0, 0, 0) 90%, transparent);
     }
 
     .desc-body {
-        padding-bottom: 20px;
-        max-height: 290px;
-        font-size: 0.9em;
+        padding-bottom: 15px;
+        max-height: 270px;
+        font-size: 0.8em;
+        -webkit-mask-image: linear-gradient(transparent, rgb(0, 0, 0) 1%, rgb(0, 0, 0) 90%, transparent);
+        mask-image: linear-gradient(transparent, rgb(0, 0, 0) 1%, rgb(0, 0, 0) 90%, transparent);
     }
     .about-desc-desc {
         font-size: 0.8em;
     }
 
     .doc-link {
-        margin-top: 20px;
+        margin-top: 15px;
         font-size: 0.8em;
     }
 }
