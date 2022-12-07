@@ -1,22 +1,8 @@
-@media screen and (max-width: 1200px) {
-    .tab {
-        font-size: 1.5em;
-    }
-
-}
-
-@media screen and (min-width: 1200px) {
-    .tab {
-        font-size: 2.5em;
-    }
-}
-
 
 .tab-container {
     display: flex;
     flex-direction: column;
     width: 300px;
-    height: 110px;
     opacity: 0;
     align-items: center;
     justify-content: space-evenly;
@@ -25,6 +11,7 @@
 .tab {
     margin-bottom: 15px;
     font-weight: bolder;
+    font-size: 2.5em;
     transition: all var(--anim-speed-med);
 }
 

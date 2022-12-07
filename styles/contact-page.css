@@ -2,28 +2,23 @@
     .contact-name  {
         font-size: 2em;
     }
-
     .contact-thumb {
         width: 64px;
         height: 64px;
     }
-
     .contact-container {
         width: 300px;
     }
-
 }
 
 @media screen and (min-width: 1200px) {
     .contact-name  {
         font-size: 3em;
     }
-
     .contact-thumb {
         width: 128px;
         height: 128px;
     }
-
     .contact-container {
         width: 400px;
     }

@@ -4,15 +4,17 @@
     }
 
     .about-desc-wrapper  {
-        width: 80%;
+        margin: 0 5%;
+        width: 85%;
     }
 
     .about-cat-wrapper  {
-        font-size: 0.8em;
+        font-size: 0.7em;
     }
 
     .about-cat {
         clear: both;
+        font-size: 0.8em;
     }
 
     .tag-list {
@@ -23,15 +25,17 @@
     }
 
     .desc-body {
-        padding-bottom: 25px;
-        max-height: 300px;
-        -webkit-mask-image: linear-gradient(transparent, rgb(0, 0, 0) 10%, rgb(0, 0, 0) 80%, transparent);
-        mask-image: linear-gradient(transparent, rgb(0, 0, 0) 10%, rgb(0, 0, 0) 80%, transparent);
+        padding-bottom: 20px;
+        max-height: 290px;
+        font-size: 0.9em;
+    }
+    .about-desc-desc {
+        font-size: 0.8em;
     }
 
     .doc-link {
         margin-top: 20px;
-        font-size: 1.2em;
+        font-size: 0.8em;
     }
 }
 
