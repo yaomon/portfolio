@@ -619,19 +619,19 @@ if (!String.prototype.format) {
             addImgThumbInfo
         );
         var effReq = setupImagesCat(
-            pixelArt.children[2],
+            pixelArt.children[1],
             "media/Pixelart/" + pixelArt.children[1].name,
             $("#eff-cat").find(".category-list"),
             addImgThumbInfo
         );
         var objReq = setupImagesCat(
-            pixelArt.children[3],
+            pixelArt.children[2],
             "media/Pixelart/" + pixelArt.children[2].name,
             $("#obj-cat").find(".category-list"),
             addImgThumbInfo
         );
         var sceneReq = setupImagesCat(
-            pixelArt.children[1],
+            pixelArt.children[3],
             "media/Pixelart/" + pixelArt.children[3].name,
             $("#scene-cat").find(".category-list"),
             addImgThumbInfo
