@@ -1,5 +1,4 @@
 "use strict";
-
 // Add format function for string
 if (!String.prototype.format) {
     String.prototype.format = function () {
@@ -14,7 +13,6 @@ if (!String.prototype.format) {
     let THUMBNAIL_EL =
         '<div class="thumb">' + '<div class="thumb-img"></div>' + "</div>;";
     let THUMBTEXT_EL = '<div class="thumb-text inset-text"></div>';
-    let BASE_URL = "https://raw.githubusercontent.com/yaomon/portfolio/main/";
     function addCharInfo() {
         $("#beatdown").data("info", {
             name: "Beatdown",
@@ -379,7 +377,7 @@ if (!String.prototype.format) {
 
         newEl
             .find(".thumb-img")
-            .css("background-image", "url('" + BASE_URL + path + "')");
+            .css("background-image", "url('" + path + "/" + val + "')");
         newEl.attr("id", val.split(".")[0]);
         newEl.click(function () {
             let parCarousel = $(this).parents(".carousel");
@@ -430,26 +428,15 @@ if (!String.prototype.format) {
                 .find(".desc-name .software")
                 .html($(this).data("info").software);
             parCarousel.find(".desc-desc").html($(this).data("info").desc);
-            parCarousel.find(".soft-vid").attr("src", BASE_URL + path);
+            parCarousel.find(".soft-vid").attr("src", path + "/" + val);
             parCarousel.find(".soft-vid")[0].load();
         });
         listEl.append(newEl);
     }
 
-    function setupImagesCat(path, listEl, processFunc) {
-        return $.ajax({
-            url: path,
-            beforeSend: function (xhr) {
-                xhr.setRequestHeader(
-                    "Authorization",
-                    "Bearer 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"
-                );
-            },
-            success: function (data) {
-                data.forEach((element) => {
-                    processFunc(element.path, element.name, listEl);
-                });
-            },
+    function setupImagesCat(elementsList, path, listEl, processFunc) {
+        elementsList.children.forEach((element) => {
+            processFunc(path, element.name, listEl);
         });
     }
 
@@ -626,22 +613,26 @@ if (!String.prototype.format) {
 
     $(document).ready(function () {
         var charReq = setupImagesCat(
-            "https://api.github.com/repos/yaomon/portfolio/contents/media/PixelArt/Characters",
+            pixelArt.children[0],
+            "media/Pixelart/" + pixelArt.children[0].name,
             $("#char-cat").find(".category-list"),
             addImgThumbInfo
         );
         var sceneReq = setupImagesCat(
-            "https://api.github.com/repos/yaomon/portfolio/contents/media/PixelArt/Scenes",
+            pixelArt.children[1],
+            "media/Pixelart/" + pixelArt.children[1].name,
             $("#scene-cat").find(".category-list"),
             addImgThumbInfo
         );
         var effReq = setupImagesCat(
-            "https://api.github.com/repos/yaomon/portfolio/contents/media/PixelArt/Effects",
+            pixelArt.children[2],
+            "media/Pixelart/" + pixelArt.children[2].name,
             $("#eff-cat").find(".category-list"),
             addImgThumbInfo
         );
         var objReq = setupImagesCat(
-            "https://api.github.com/repos/yaomon/portfolio/contents/media/PixelArt/Objects",
+            pixelArt.children[3],
+            "media/Pixelart/" + pixelArt.children[3].name,
             $("#obj-cat").find(".category-list"),
             addImgThumbInfo
         );
@@ -663,7 +654,8 @@ if (!String.prototype.format) {
         });
 
         var softReq = setupImagesCat(
-            "https://api.github.com/repos/yaomon/portfolio/contents/media/Vids",
+            vids,
+            "media/" + vids.name,
             $(".prog-screen").find(".thumbs-list"),
             addVidThumbInfo
         );
