@@ -126,6 +126,9 @@ pixelArt = {
             "name": "Objects",
             "children": [
                 {
+                    "name": "aSword.gif"
+                },
+                {
                     "name": "bigShip.gif"
                 },
                 {

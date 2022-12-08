@@ -347,6 +347,12 @@ if (!String.prototype.format) {
             desc: "<i><b>Splish Splash!</b></i><br>Part of an old commission for some social media assets.<br>",
             shadOffset: 0,
         });
+        $("#aSword").data("info", {
+            name: "Sword out of Time",
+            year: "2021",
+            desc: "<i><b>What an odd aura...</b></i><br>A piece done for fun and practice on particles and lighting (as you can tell by the zappy ball thing)! I quite like how the design turned out.<br>",
+            shadOffset: 0,
+        });
     }
 
     function addSoftwareInfo() {
