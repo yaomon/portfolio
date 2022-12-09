@@ -53,7 +53,7 @@ pixelArt = {
                     "name": "gordo.png"
                 },
                 {
-                    "name": "magneto.png"
+                    "name": "magneto.gif"
                 },
                 {
                     "name": "mecha.png"
