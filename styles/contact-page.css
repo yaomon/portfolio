@@ -158,13 +158,13 @@
 
 
 #email .contact-logo {
-    background-image: url("../media/Contact/mailLogo.png");
+    background-image: url("../media/Contact/EmailLogo.png");
 }
 
 #email .contact-logo-mask  {
     background-image: -webkit-linear-gradient(45deg, transparent 0%,  transparent 75%,  rgba(0, 0, 0, 0.2) 80%,    rgba(0, 0, 0, 0.5) 90%,    rgb(0, 0, 0, 0.7) 100%);
-    -webkit-mask-image: url("../media/Contact/mailLogoMask.png");
-    mask-image: url("../media/Contact/mailLogoMask.png");
+    -webkit-mask-image: url("../media/Contact/EmailLogoMask.png");
+    mask-image: url("../media/Contact/EmailLogoMask.png");
 }
 
 #email:hover .contact-name {
