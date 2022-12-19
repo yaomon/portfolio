@@ -182,6 +182,12 @@ if (!String.prototype.format) {
             desc: "<i><b>Zapdos! ZAP!</b></i><br><br>This was done back when the new Galarian Zapdos was announced. The animation was a bit lazy, but I was so excited that I wanted to pump out the piece ASAP!",
             shadOffset: 0,
         });
+        $("#destroyer").data("info", {
+            name: "Destroyer",
+            year: "2022",
+            desc: "<i><b>BZZZZT!</b></i><br><br>Destroyer for the Marvel Thor series! A <i>Marvel Snap</i> fan variant.",
+            shadOffset: 0,
+        });
     }
 
     function addSceneInfo() {
