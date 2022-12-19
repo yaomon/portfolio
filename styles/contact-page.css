@@ -3,8 +3,8 @@
         font-size: 2em;
     }
     .contact-thumb {
-        width: 64px;
-        height: 64px;
+        min-width: 64px;
+        min-height: 64px;
     }
     .contact-container {
         width: 300px;
@@ -16,8 +16,8 @@
         font-size: 3em;
     }
     .contact-thumb {
-        width: 128px;
-        height: 128px;
+        min-width: 128px;
+    min-height: 128px;
     }
     .contact-container {
         width: 400px;

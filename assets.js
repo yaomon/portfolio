@@ -35,6 +35,9 @@ pixelArt = {
                     "name": "deer.gif"
                 },
                 {
+                    "name": "destroyer.png"
+                },
+                {
                     "name": "detective.png"
                 },
                 {
