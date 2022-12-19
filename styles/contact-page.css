@@ -142,6 +142,35 @@
     text-shadow: 1px 1px 10px rgba(255, 32, 32, 0.5), -1px -1px 1px rgba(255, 94, 255, 0.5);
 }
 
+#disc .contact-logo {
+    background-image: url("../media/Contact/discLogo.png");
+}
+
+#disc .contact-logo-mask  {
+    background-image: -webkit-linear-gradient(45deg, transparent 0%,  transparent 75%,  rgba(88, 101, 242, 0.2) 80%,    rgba(88, 101, 242, 0.5) 90%,    rgb(88, 101, 242, 0.7) 100%);
+    -webkit-mask-image: url("../media/Contact/discLogoMask.png");
+    mask-image: url("../media/Contact/discLogoMask.png");
+}
+
+#disc:hover .contact-name {
+    text-shadow: 1px 1px 10px rgba(88, 101, 242, 0.2), -1px -1px 1px rgba(88, 101, 242, 0.7);
+}
+
+
+#email .contact-logo {
+    background-image: url("../media/Contact/mailLogo.png");
+}
+
+#email .contact-logo-mask  {
+    background-image: -webkit-linear-gradient(45deg, transparent 0%,  transparent 75%,  rgba(0, 0, 0, 0.2) 80%,    rgba(0, 0, 0, 0.5) 90%,    rgb(0, 0, 0, 0.7) 100%);
+    -webkit-mask-image: url("../media/Contact/mailLogoMask.png");
+    mask-image: url("../media/Contact/mailLogoMask.png");
+}
+
+#email:hover .contact-name {
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2), -1px -1px 1px rgba(0, 0, 0, 0.7);
+}
+
 .contact-container:hover .contact-logo-mask {
     background-position: right 0px top 0px;
 }
